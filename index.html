@@ -5,38 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body id="body" style="height: 100vh; display: flex; gap: 10px; justify-content: center; align-items: center;">
-    <h1 id="surprise"></h1>
-    <div
-        style="display: flex; justify-content: center; flex-direction: column; align-items: center; padding: 10px; border-radius: 15px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
-        <h1
-            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
-            Goku autista</h1>
-        <img src="./assets/artworks-000323149572-7kv13n-t500x500.jpg" style="border-radius: 15px;" alt="">
-    </div>
-    <div>
-        <form action="" >
-            <div style="display: flex; flex-direction: column; gap: 10px;">
-                <label for="">Opniao</label>
+    <div class="main">
+        <div
+            style="display: flex; justify-content: center; flex-direction: column; align-items: center; padding: 10px; border-radius: 15px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; ">
+            <h1>
+                Goku autista</h1>
+            <img id="img" src="./assets/artworks-000323149572-7kv13n-t500x500.jpg" style="border-radius: 15px;" alt="">
+        </div>
+        <div>
+            <form action="">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
 
-                <input type="text" placeholder="Deixe sua opniao" id="">
+                    <input class="input" type="text" placeholder="Deixe sua opniao" id="comment-input">
 
-                <button id="button">Enviar</button>
-            </div>
-        </form>
+                    <button class="button" id="button">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div id="comments-div" class="display-none" style="height: 100%;">
+            <h1>Opnioes de bosta</h1>
+            <ul id="comments-list">
+
+            </ul>
+        </div>
     </div>
 </body>
-<script>
-    const surpriseTag = document.getElementById("surprise")
-    const body = document.getElementById("body")
-    const button = document.getElementById("button")
-    button.addEventListener("click", (e) => {
-        e.preventDefault()
-        body.style.background = "red"
-        surpriseTag.textContent = "Voce clicou no botao"
-        alert("Botao clicado")
-    })
-</script>
+<script src="./assets/scripts/main.js"></script>
+
 </html>
